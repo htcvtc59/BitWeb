@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bit</title>
+    <script type="text/javascript" src="/moment.js"></script>
+    <script type="text/javascript" src="/Chart.js"></script>
+    <script type="text/javascript" src="/chartjs-plugin-streaming.js"></script>
+    <script type="text/javascript" src="/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var chartColors = {
+                red: 'rgb(255, 99, 132)',
+                orange: 'rgb(255, 159, 64)',
+                yellow: 'rgb(255, 205, 86)',
+                green: 'rgb(75, 192, 192)',
+                blue: 'rgb(54, 162, 235)',
+                purple: 'rgb(153, 102, 255)',
+                grey: 'rgb(201, 203, 207)'
+            };
+
+            function onRefresh() {
+                // config.data.datasets.forEach(function (dataset) {
+                //     dataset.data.push({
+                //         x: Date.now(),
+                //         y: Math.random*100
+                //     });
+                // });
+
+
+                config.data.datasets[0].data.push({
+                    x: Date.now(),
+                    y: Math.random() * 100
+                });
+
+                config.data.datasets[1].data.push({
+                    x: Date.now(),
+                    y: Math.random() * 100
+                });
+
+
+            }
+
+
+            function epoch_to_hh_mm_ss(epoch) {
+                return new Date(epoch * 1000).toISOString().substr(12, 7)
+            }
+
+            var color = Chart.helpers.color;
+            var config = {
+                type: 'line',
+                labels: [],
+                data: {
+                    datasets: [{
+                        label: 'Sell',
+                        backgroundColor: color(chartColors.red).alpha(0.5).rgbString(),
+                        borderColor: chartColors.red,
+                        fill: true,
+                        lineTension: 0,
+                        data: []
+                    }, {
+                        label: 'Buy',
+                        backgroundColor: color(chartColors.blue).alpha(0.5).rgbString(),
+                        borderColor: chartColors.blue,
+                        fill: true,
+                        lineTension: 0,
+                        data: []
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'BTC/USD'
+                    },
+                    scales: {
+                        xAxes: [{
+                            type: 'realtime',
+                            display: true,
+                        }],
+                        yAxes: [{
+                            type: 'linear',
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'USD'
+                            },
+                        }]
+                    },
+                    tooltips: {
+                        intersect: false,
+                        mode: "nearest"
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: false
+                    },
+                    plugins: {
+                        streaming: {
+                            duration: 20000,
+                            refresh: 1000,
+                            delay: 2000,
+                            onRefresh: onRefresh
+                        }
+                    }
+                }
+            };
+
+            var ctx = document.getElementById('chart2').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+
+        });
+    </script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+<div style="width: 50%; margin:auto;">
+    <canvas id="chart2" style="height:60vh; width:80vw"></canvas>
+</div>
+
+</body>
+
+</html>

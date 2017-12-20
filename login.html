@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sell/Buy</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.2.0/chartjs-plugin-streaming.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="jquery.mCustomScrollbar.css">
+    <script src="jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.content').mCustomScrollbar({
+                axis: 'yx',
+                theme: 'minimal-dark',
+                setHeight: true,
+
+
+            });
+        });
+
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body style="background-color: #cfd8dc;">
+
+<div class="container-fluid" >
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light col-12" style="background-color: #039be5;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="index.html">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="sellbuy.html">Sell/Buy</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="#">Recent</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <a style="color: white;" class="nav-link" href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <div class="row">
+        <div class="col-4 offset-4"
+             style="height: 200px;
+         margin-top: 100px;">
+            <form >
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="g-recaptcha" data-sitekey="6Lcdwz0UAAAAAOHC49Sk_N1uAgbaLpvXcfSpyj_C"></div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="col-12" style="margin-top: 200px;">
+
+    </div>
+</div>
+
+</body>
+</html>
