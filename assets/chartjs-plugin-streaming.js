@@ -9,8 +9,8 @@
  * https://github.com/nagix/chartjs-plugin-streaming/blob/master/LICENSE.md
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('chart.js'), require('moment')) :
-	typeof define === 'function' && define.amd ? define(['chart.js', 'moment'], factory) :
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('assets/Chart.js'), require('assets/moment')) :
+	typeof define === 'function' && define.amd ? define(['assets/Chart.js', 'assets/moment'], factory) :
 	(global['chartjs-plugin-streaming'] = factory(global.Chart,global.moment));
 }(this, (function (Chart,moment) { 'use strict';
 

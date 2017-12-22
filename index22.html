@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Index</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.2.0/chartjs-plugin-streaming.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+    <script src="assets/jquery-3.2.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/jquery.mCustomScrollbar.css">
+    <script src="assets/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="assets/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.content').mCustomScrollbar({
+                axis: 'yx',
+                theme: 'minimal-dark',
+                setHeight: true,
+
+
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light col-12" style="background-color: #039be5;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="index22.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="sellbuy.html">Sell/Buy</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a style="color: white;" class="nav-link" href="#">Recent</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <a style="color: white;" class="nav-link" href="login.html">Login</a>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div style="width:75%; margin: auto;" class="col-12">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="col-12">
+                <div style="height: 40px; width: 100%;
+            background-color: #2979ff; color: white; padding-left: 20px; line-height: 40px;
+            margin: 10px 0px 10px 0px;">Buy
+                </div>
+                <div style="height: 160px;" class="content">
+                    <table class="table table-responsive-sm table-sm">
+                        <thead>
+                        <tr>
+                            <th style="font-weight: normal;" scope="col">Price per BTC</th>
+                            <th style="font-weight: normal;" scope="col">BTC Amount</th>
+                            <th style="font-weight: normal;" scope="col">Buy Fee</th>
+                            <th style="font-weight: normal;" scope="col">Total: (USD)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-12">
+                <div style="height: 40px; width: 100%;
+            background-color: #2979ff; color: white; padding-left: 20px; line-height: 40px;
+            margin: 10px 0px 10px 0px;">Sell
+                </div>
+                <div style="height: 160px;" class="content">
+                    <table class="table table-responsive-sm table-sm">
+                        <thead>
+                        <tr>
+                            <th style="font-weight: normal;" scope="col">Price per BTC</th>
+                            <th style="font-weight: normal;" scope="col">BTC Amount</th>
+                            <th style="font-weight: normal;" scope="col">Sell Fee</th>
+                            <th style="font-weight: normal;" scope="col">Total: (USD)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        <tr>
+                            <td>1450000</td>
+                            <td>0.112132131</td>
+                            <td>0.15%</td>
+                            <td>1405405450</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div style="height: 40px; width: 100%;
+            background-color: #2979ff; color: white; padding-left: 20px; line-height: 40px;
+            margin: 10px 0px 10px 0px;">History
+            </div>
+            <div style="height: 260px;" class="content">
+                <table class="table table-responsive-sm table-sm">
+                    <thead>
+                    <tr>
+                        <th style="font-weight: normal;" scope="col">Market</th>
+                        <th style="font-weight: normal;" scope="col">Type</th>
+                        <th style="font-weight: normal;" scope="col">Category</th>
+                        <th style="font-weight: normal;" scope="col">Price/Share</th>
+                        <th style="font-weight: normal;" scope="col">Amount</th>
+                        <th style="font-weight: normal;" scope="col">Fee</th>
+                        <th style="font-weight: normal;" scope="col">Total</th>
+                        <th style="font-weight: normal;" scope="col">Transaction Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>BTC</td>
+                        <td style="color: #ef5350">Sell</td>
+                        <td>Exchange</td>
+                        <td>0.000023232</td>
+                        <td>8932.323232</td>
+                        <td>0.0032130 BTC (0.15%)</td>
+                        <td>0.0004343 BTC</td>
+                        <td>2017-12-20 11:21:11</td>
+                    </tr>
+
+                    <tr>
+                        <td>BTC</td>
+                        <td style="color: #4caf50">Buy</td>
+                        <td>Exchange</td>
+                        <td>0.000023232</td>
+                        <td>8932.323232</td>
+                        <td>0.0032130 BTC (0.15%)</td>
+                        <td>0.0004343 BTC</td>
+                        <td>2017-12-20 11:21:11</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12" style="margin-top: 200px;">
+
+    </div>
+</div>
+
+<script>
+    var chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)'
+    };
+
+    function newDate(ms) {
+        return moment().add(ms, 'ms');
+    }
+
+    function randomScalingFactor() {
+        return Math.round(Math.random() * 100);
+    }
+
+    function onRefresh() {
+        config.data.datasets.forEach(function (dataset) {
+            dataset.data.push({
+                x: moment(),
+                y: randomScalingFactor()
+            });
+        });
+    }
+
+    var color = Chart.helpers.color;
+    var config = {
+        type: 'line',
+        data: {
+            datasets: [{
+                label: 'Sell',
+                backgroundColor: color(chartColors.red).alpha(0.5).rgbString(),
+                borderColor: chartColors.red,
+                fill: true,
+                lineTension: 0,
+                // borderDash: [8, 4],
+                data: []
+            }, {
+                label: 'Buy',
+                backgroundColor: color(chartColors.blue).alpha(0.5).rgbString(),
+                borderColor: chartColors.blue,
+                fill: true,
+                cubicInterpolationMode: 'monotone',
+                data: []
+            }]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'BTC/USD'
+            },
+            scales: {
+                xAxes: [{
+                    type: 'realtime',
+                    display: true,
+                }],
+                yAxes: [{
+                    type: 'linear',
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'USD'
+                    }
+                }]
+            },
+            tooltips: {
+                intersect: false
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: false
+            },
+            plugins: {
+                streaming: {
+                    duration: 20000,
+                    refresh: 1000,
+                    delay: 2000,
+                    onRefresh: onRefresh
+                }
+            }
+        }
+    };
+
+    window.onload = function () {
+        var ctx = document.getElementById('canvas').getContext('2d');
+        window.myLine = new Chart(ctx, config);
+    };
+
+
+</script>
+
+
+</body>
+
+</html>
