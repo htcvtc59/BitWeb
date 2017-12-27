@@ -14,9 +14,14 @@
 
     <link rel="stylesheet" href="assets/normalize.css">
 
-    <script src="assets/moment.js" type="text/javascript"></script>
-    <script src="assets/Chart.js" type="text/javascript"></script>
-    <script src="assets/chartjs-plugin-streaming.js" type="text/javascript"></script>
+    <!--<script src="assets/moment.js" type="text/javascript"></script>-->
+    <!--<script src="assets/Chart.js" type="text/javascript"></script>-->
+    <!--<script src="assets/chartjs-plugin-streaming.js" type="text/javascript"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://github.com/nagix/chartjs-plugin-streaming/releases/download/v1.2.0/chartjs-plugin-streaming.min.js"></script>
+
 
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="assets/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -100,7 +105,7 @@
         <div class="col-12 d-flex justify-content-center nav-menu-content">
             <a href="index.html" class="p-4 active-content border-radius-content-left">Home</a>
             <a href="#" class="p-4 active-content" style="outline: none !important;box-shadow: none;"
-               data-toggle="modal" data-target="#exampleModal" onclick="sendForm()" >Try</a>
+               data-toggle="modal" data-target="#exampleModal" onclick="sendForm()">Try</a>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                  aria-hidden="true">
@@ -113,10 +118,10 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div id="accountsname">Name : name</div>
-                            <div id="accountspass">Pass : 1234</div>
-                            <div id="accountsbtc">BTC : 1000</div>
-                            <div id="accountsamount">Amount USD : 10000</div>
+                            <div id="accountsname">Name :</div>
+                            <div id="accountspass">Pass :</div>
+                            <div id="accountsbtc">BTC :</div>
+                            <div id="accountsamount">Amount USD :</div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -125,20 +130,25 @@
                 </div>
             </div>
             <!--End Modal-->
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4"></a>
-            <a href="#" class="p-4 active-content border-radius-content-right" style="outline: none !important;box-shadow: none;"
-               data-toggle="modal" data-target="#exampleModalLogin" >Login</a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a class="p-4"></a>
+            <a id="status_logined" href="#" class="p-4 active-content border-radius-content-right"
+               style="outline: none !important;box-shadow: none;"
+               data-toggle="modal" data-target="#exampleModalLogin">Login
+
+            </a>
+
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogin"
+            <div class="modal fade" id="exampleModalLogin" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabelLogin"
                  aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -149,17 +159,19 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Name">
+                                    <label for="logininputName">Name</label>
+                                    <input type="text" class="form-control" id="logininputName"
+                                           placeholder="Enter Name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <label for="logininputPassword">Password</label>
+                                    <input type="password" class="form-control" id="logininputPassword"
+                                           placeholder="Password">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Login</button>
-                            </form>
+                                <button id="form_login" class="btn btn-primary">Login</button>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -406,35 +418,35 @@
                                         Sell BTC
                                     </div>
                                     <div class="col-12 back-color-sell-buy">
-                                        <form class="row">
+                                        <form class="row form_Sell" >
                                             <div class="input-group">
                                                 <span class="input-group-addon">Order Type</span>
-                                                <select class="custom-select form-control">
-                                                    <option selected>Open this select menu</option>
+                                                <select class="custom-select form-control" name="market">
+                                                    <option selected value="0">Open this select menu</option>
                                                     <option value="1">Limit</option>
                                                     <option value="2">Market</option>
                                                 </select>
                                             </div>
                                             <div class="input-group">
                                                 <span class="input-group-addon">Price</span>
-                                                <input id="sell_price_text" type="text" class="form-control"
+                                                <input id="sell_price_text" type="text" class="form-control" name="price_per"
                                                        aria-label="Amount (to the nearest dollar)">
                                                 <span class="input-group-addon">USD</span>
                                             </div>
                                             <div class="input-group">
                                                 <span class="input-group-addon">BTC Amount</span>
-                                                <input id="sell_btcamount_text" type="text" class="form-control"
+                                                <input id="sell_btcamount_text" type="text" class="form-control" name="btc"
                                                        aria-label="Amount (to the nearest dollar)">
                                                 <span class="input-group-addon">BTC</span>
                                             </div>
                                             <div class="input-group">
                                                 <span class="input-group-addon">USD Amount</span>
-                                                <input id="sell_usdamount_text" type="text" class="form-control"
+                                                <input id="sell_usdamount_text" type="text" class="form-control" name="usd"
                                                        aria-label="Amount (to the nearest dollar)">
                                                 <span class="input-group-addon">USD</span>
                                             </div>
                                             <div class="col-12 result-amount" id="sell_resultbtc_text">
-                                                0.0000 BTC
+                                                0.00 USD
                                             </div>
                                             <button type="submit" class="btn btn-danger col-12">Sell BTC</button>
                                         </form>
@@ -447,35 +459,35 @@
                                     </div>
 
                                     <div class="col-12 back-color-sell-buy">
-                                        <form class="row">
+                                        <form class="row form_Buy">
                                             <div class="input-group">
                                                 <span class="input-group-addon">Order Type</span>
-                                                <select class="custom-select form-control">
-                                                    <option selected>Open this select menu</option>
+                                                <select class="custom-select form-control" name="market">
+                                                    <option selected value="0">Open this select menu</option>
                                                     <option value="1">Limit</option>
                                                     <option value="2">Market</option>
                                                 </select>
                                             </div>
                                             <div class="input-group">
                                                 <span class="input-group-addon">Price</span>
-                                                <input id="buy_price_text" type="text" class="form-control"
+                                                <input id="buy_price_text" type="text" class="form-control" name="price_per"
                                                        aria-label="Amount (to the nearest dollar)">
                                                 <span class="input-group-addon">USD</span>
                                             </div>
                                             <div class="input-group">
                                                 <span class="input-group-addon">BTC Amount</span>
-                                                <input id="buy_btcamount_text" type="text" class="form-control"
+                                                <input id="buy_btcamount_text" type="text" class="form-control" name="btc"
                                                        aria-label="Amount (to the nearest dollar)">
                                                 <span class="input-group-addon">BTC</span>
                                             </div>
                                             <div class="input-group">
                                                 <span class="input-group-addon">USD Amount</span>
-                                                <input id="buy_usdamount_text" type="text" class="form-control"
+                                                <input id="buy_usdamount_text" type="text" class="form-control" name="usd"
                                                        aria-label="Amount (to the nearest dollar)">
                                                 <span class="input-group-addon">USD</span>
                                             </div>
                                             <div class="col-12 result-amount" id="buy_resultbtc_text">
-                                                13.00 USD
+                                                0.00 USD
                                             </div>
                                             <button type="submit" class="btn btn-success col-12">Buy BTC</button>
                                         </form>

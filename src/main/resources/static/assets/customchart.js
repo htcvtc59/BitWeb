@@ -33,7 +33,7 @@ var config = {
             label: 'Sell',
             backgroundColor: color(chartColors.red).alpha(0.5).rgbString(),
             borderColor: chartColors.red,
-            fill: true,
+            fill: false,
             lineTension: 0,
             // borderDash: [8, 4],
             data: []
@@ -41,7 +41,7 @@ var config = {
             label: 'Buy',
             backgroundColor: color(chartColors.blue).alpha(0.5).rgbString(),
             borderColor: chartColors.blue,
-            fill: true,
+            fill: false,
             cubicInterpolationMode: 'monotone',
             data: []
         }]

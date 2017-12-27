@@ -5,16 +5,10 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.model.Filters;
-import org.bson.BSON;
 import org.bson.Document;
-import org.bson.conversions.Bson;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
-
-import javax.print.Doc;
-import java.util.ArrayList;
 
 @Controller
 public class PageLoadingController {
